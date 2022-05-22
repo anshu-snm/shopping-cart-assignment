@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700");
+body {
+  margin: 0;
+  font-family: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.btn {
+  background-color: #d10057;
+}
+.cartIcon {
+  filter: invert(11%) sepia(100%) saturate(6190%) hue-rotate(329deg)
+    brightness(81%) contrast(102%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+input:focus-within ~ label {
+  @apply transform scale-75 -translate-y-6 text-blue-500;
+}
+
+input:focus-within ~ label,
+input:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 -translate-y-6;
+}
+
+input:focus-within ~ label {
+  @apply text-label_blue;
+}
+
+.custom-shadow {
+  width: 100vw;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.custom-shadow:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin-left: 17rem;
+  height: 30px;
+  border-radius: 100%;
+  z-index: -1;
+  box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.5);
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
